@@ -21,11 +21,11 @@ class Validator
     }
 
     /**
-     * @param Asserter $asserter
+     * @param AsserterInterface $asserter
      *
      * @return bool
      */
-    public function claim(Asserter $asserter)
+    public function claim(AsserterInterface $asserter)
     {
         return $asserter->check($this->data);
     }

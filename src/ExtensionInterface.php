@@ -2,7 +2,7 @@
 
 namespace carlosV2\Can;
 
-interface Extension
+interface ExtensionInterface
 {
     /**
      * @return array

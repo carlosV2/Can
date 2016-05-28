@@ -2,7 +2,7 @@
 
 namespace carlosV2\Can;
 
-interface Asserter
+interface AsserterInterface
 {
     /**
      * @param mixed $data

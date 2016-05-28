@@ -2,19 +2,19 @@
 
 namespace spec\carlosV2\Can;
 
-use carlosV2\Can\Extension;
+use carlosV2\Can\ExtensionInterface;
 use PhpSpec\ObjectBehavior;
 
 class ToSpec extends ObjectBehavior
 {
-    function let(Extension $extension)
+    function let(ExtensionInterface $extension)
     {
         $extension->registerAsserters()->willReturn(['test' => 'spec\carlosV2\Can\TestAsserter']);
 
         $this->registerExtenstion($extension);
     }
 
-    function it_registers_new_extensions(Extension $extension)
+    function it_registers_new_extensions(ExtensionInterface $extension)
     {
         $extension->registerAsserters()->shouldBeCalled();
     }

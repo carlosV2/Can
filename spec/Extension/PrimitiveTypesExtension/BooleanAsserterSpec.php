@@ -8,7 +8,7 @@ class BooleanAsserterSpec extends ObjectBehavior
 {
     function it_is_an_Asserter()
     {
-        $this->shouldHaveType('carlosV2\Can\Asserter');
+        $this->shouldHaveType('carlosV2\Can\AsserterInterface');
     }
 
     function it_returns_true_for_boolean()

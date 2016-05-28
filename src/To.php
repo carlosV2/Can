@@ -12,9 +12,9 @@ class To
     private static $asserters = [];
     
     /**
-     * @param Extension $extension
+     * @param ExtensionInterface $extension
      */
-    public static function registerExtenstion(Extension $extension)
+    public static function registerExtenstion(ExtensionInterface $extension)
     {
         foreach ($extension->registerAsserters() as $name => $asserter) {
             self::$asserters[strtolower($name)] = $asserter;
@@ -25,7 +25,7 @@ class To
      * @param string $name
      * @param array  $arguments
      *
-     * @return Asserter
+     * @return AsserterInterface
      *
      * @throws AsserterNotFoundException
      */

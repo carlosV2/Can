@@ -2,9 +2,9 @@
 
 namespace carlosV2\Can\Extension\PrimitiveTypesExtension;
 
-use carlosV2\Can\Asserter;
+use carlosV2\Can\AsserterInterface;
 
-class ArrayAsserter implements Asserter
+class ArrayAsserter implements AsserterInterface
 {
     /**
      * @var integer
@@ -17,12 +17,12 @@ class ArrayAsserter implements Asserter
     private $max;
 
     /**
-     * @var Asserter
+     * @var AsserterInterface
      */
     private $valuesAsserter;
 
     /**
-     * @var Asserter[]
+     * @var AsserterInterface[]
      */
     private $keys;
 
@@ -67,11 +67,11 @@ class ArrayAsserter implements Asserter
     }
 
     /**
-     * @param Asserter $valuesAsserter
+     * @param AsserterInterface $valuesAsserter
      *
      * @return ArrayAsserter
      */
-    public function withValuesExpected(Asserter $valuesAsserter)
+    public function withValuesExpected(AsserterInterface $valuesAsserter)
     {
         $this->valuesAsserter = $valuesAsserter;
 
@@ -92,11 +92,11 @@ class ArrayAsserter implements Asserter
     }
 
     /**
-     * @param Asserter $asserter
+     * @param AsserterInterface $asserter
      *
      * @return ArrayAsserter
      */
-    public function expected(Asserter $asserter)
+    public function expected(AsserterInterface $asserter)
     {
         if (is_null($this->lastKey)) {
             throw new \BadMethodCallException();

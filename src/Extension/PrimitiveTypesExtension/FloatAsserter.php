@@ -2,9 +2,9 @@
 
 namespace carlosV2\Can\Extension\PrimitiveTypesExtension;
 
-use carlosV2\Can\Asserter;
+use carlosV2\Can\AsserterInterface;
 
-class FloatAsserter implements Asserter
+class FloatAsserter implements AsserterInterface
 {
     /**
      * @var float

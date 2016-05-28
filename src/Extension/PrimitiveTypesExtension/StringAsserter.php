@@ -2,9 +2,9 @@
 
 namespace carlosV2\Can\Extension\PrimitiveTypesExtension;
 
-use carlosV2\Can\Asserter;
+use carlosV2\Can\AsserterInterface;
 
-class StringAsserter implements Asserter
+class StringAsserter implements AsserterInterface
 {
     /**
      * @var integer

@@ -2,9 +2,9 @@
 
 namespace carlosV2\Can\Extension\PrimitiveTypesExtension;
 
-use carlosV2\Can\Extension;
+use carlosV2\Can\ExtensionInterface;
 
-class PrimitiveTypesExtension implements Extension
+class PrimitiveTypesExtension implements ExtensionInterface
 {
     /**
      * @inheritdoc

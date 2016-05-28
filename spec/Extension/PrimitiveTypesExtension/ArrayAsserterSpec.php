@@ -2,14 +2,14 @@
 
 namespace spec\carlosV2\Can\Extension\PrimitiveTypesExtension;
 
-use carlosV2\Can\Asserter;
+use carlosV2\Can\AsserterInterface;
 use PhpSpec\ObjectBehavior;
 
 class ArrayAsserterSpec extends ObjectBehavior
 {
     function _it_is_an_Asserter()
     {
-        $this->shouldHaveType('carlosV2\Can\Asserter');
+        $this->shouldHaveType('carlosV2\Can\AsserterInterface');
     }
 
     function _it_returns_true_for_arrays()
@@ -44,7 +44,7 @@ class ArrayAsserterSpec extends ObjectBehavior
         $this->check(['a', 'b', 'c'])->shouldReturn(false);
     }
 
-    function _it_ensures_the_values_types(Asserter $asserter)
+    function _it_ensures_the_values_types(AsserterInterface $asserter)
     {
         $asserter->check('a')->willReturn(true);
         $asserter->check('b')->willReturn(false);
@@ -66,7 +66,7 @@ class ArrayAsserterSpec extends ObjectBehavior
         $this->check(['k1' => 'val1', 'k2' => 'val2', 'k3' => 'val3'])->shouldReturn(false);
     }
 
-    function _it_ensures_the_keys_types(Asserter $asserterK1, Asserter $asserterK2)
+    function _it_ensures_the_keys_types(AsserterInterface $asserterK1, AsserterInterface $asserterK2)
     {
         $asserterK1->check('val1')->willReturn(true);
         $asserterK1->check(1)->willReturn(false);
@@ -81,7 +81,7 @@ class ArrayAsserterSpec extends ObjectBehavior
         $this->check(['k1' => 1, 'k2' => 'val2'])->shouldReturn(false);
     }
 
-    function _it_does_not_allow_the_expected_to_be_called_without_a_key(Asserter $asserter)
+    function _it_does_not_allow_the_expected_to_be_called_without_a_key(AsserterInterface $asserter)
     {
         $this->shouldThrow('\BadMethodCallException')->duringExpected($asserter);
     }

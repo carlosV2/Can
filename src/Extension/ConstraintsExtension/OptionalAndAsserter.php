@@ -2,19 +2,19 @@
 
 namespace carlosV2\Can\Extension\ConstraintsExtension;
 
-use carlosV2\Can\Asserter;
+use carlosV2\Can\AsserterInterface;
 
-class OptionalAndAsserter implements Asserter
+class OptionalAndAsserter implements AsserterInterface
 {
     /**
-     * @var Asserter
+     * @var AsserterInterface
      */
     private $asserter;
 
     /**
-     * @param Asserter $asserter
+     * @param AsserterInterface $asserter
      */
-    public function __construct(Asserter $asserter)
+    public function __construct(AsserterInterface $asserter)
     {
         $this->asserter = $asserter;
     }

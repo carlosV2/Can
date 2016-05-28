@@ -2,12 +2,12 @@
 
 namespace spec\carlosV2\Can\Extension\ConstraintsExtension;
 
-use carlosV2\Can\Asserter;
+use carlosV2\Can\AsserterInterface;
 use PhpSpec\ObjectBehavior;
 
 class OneOfAsserterSpec extends ObjectBehavior
 {
-    function let(Asserter $asserter1, Asserter $asserter2, Asserter $asserter3)
+    function let(AsserterInterface $asserter1, AsserterInterface $asserter2, AsserterInterface $asserter3)
     {
         $asserter1->check(123)->willReturn(false);
         $asserter2->check(123)->willReturn(false);
@@ -18,10 +18,10 @@ class OneOfAsserterSpec extends ObjectBehavior
 
     function it_is_an_Asserter()
     {
-        $this->shouldHaveType('carlosV2\Can\Asserter');
+        $this->shouldHaveType('carlosV2\Can\AsserterInterface');
     }
 
-    function it_returns_true_if_at_least_one_asserter_returns_true(Asserter $asserter2)
+    function it_returns_true_if_at_least_one_asserter_returns_true(AsserterInterface $asserter2)
     {
         $asserter2->check(123)->willReturn(true);
 

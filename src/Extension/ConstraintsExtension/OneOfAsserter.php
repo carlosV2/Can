@@ -2,12 +2,12 @@
 
 namespace carlosV2\Can\Extension\ConstraintsExtension;
 
-use carlosV2\Can\Asserter;
+use carlosV2\Can\AsserterInterface;
 
-class OneOfAsserter implements Asserter
+class OneOfAsserter implements AsserterInterface
 {
     /**
-     * @var Asserter[]
+     * @var AsserterInterface[]
      */
     private $asserters;
 

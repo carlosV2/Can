@@ -2,9 +2,9 @@
 
 namespace carlosV2\Can\Extension\ConstraintsExtension;
 
-use carlosV2\Can\Extension;
+use carlosV2\Can\ExtensionInterface;
 
-class ConstraintsExtension implements Extension
+class ConstraintsExtension implements ExtensionInterface
 {
     public function registerAsserters()
     {

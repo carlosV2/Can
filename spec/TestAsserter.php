@@ -2,9 +2,9 @@
 
 namespace spec\carlosV2\Can;
 
-use carlosV2\Can\Asserter;
+use carlosV2\Can\AsserterInterface;
 
-class TestAsserter implements Asserter
+class TestAsserter implements AsserterInterface
 {
     /**
      * @var array
