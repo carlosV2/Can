@@ -20,7 +20,8 @@ class PrimitiveTypesExtension implements ExtensionInterface
             'null' => 'carlosV2\Can\Extension\PrimitiveTypesExtension\NullAsserter',
             'bool' => 'carlosV2\Can\Extension\PrimitiveTypesExtension\BooleanAsserter',
             'boolean' => 'carlosV2\Can\Extension\PrimitiveTypesExtension\BooleanAsserter',
-            'callable' => 'carlosV2\Can\Extension\PrimitiveTypesExtension\CallableAsserter'
+            'callable' => 'carlosV2\Can\Extension\PrimitiveTypesExtension\CallableAsserter',
+            'object' => 'carlosV2\Can\Extension\PrimitiveTypesExtension\ObjectAsserter'
         ];
     }
 }
