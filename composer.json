@@ -1,0 +1,34 @@
+{
+  "name": "carlosv2/can",
+  "type": "library",
+  "description": "Tool for easy and powerful data validations",
+  "keywords": ["validate", "can", "data", "extensible"],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Carlos Ortega",
+      "email": "carlosV2.0@gmail.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "carlosV2\\Can\\": "src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "spec\\carlosV2\\Can\\": "spec"
+    }
+  },
+  "require": {
+    "php": ">=5.4,<7.1"
+  },
+  "require-dev": {
+    "phpspec/phpspec": "^2.5"
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-master": "1.0.x-dev"
+    }
+  }
+}
