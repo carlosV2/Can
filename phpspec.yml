@@ -1,0 +1,4 @@
+suites:
+  can_suite:
+    namespace: carlosV2\Can
+    psr4_prefix: carlosV2\Can
