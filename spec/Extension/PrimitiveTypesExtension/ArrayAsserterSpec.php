@@ -9,7 +9,7 @@ class ArrayAsserterSpec extends ObjectBehavior
 {
     function _it_is_an_Asserter()
     {
-        $this->shouldHaveType(Asserter::class);
+        $this->shouldHaveType('carlosV2\Can\Asserter');
     }
 
     function _it_returns_true_for_arrays()
@@ -83,6 +83,6 @@ class ArrayAsserterSpec extends ObjectBehavior
 
     function _it_does_not_allow_the_expected_to_be_called_without_a_key(Asserter $asserter)
     {
-        $this->shouldThrow(\BadMethodCallException::class)->duringExpected($asserter);
+        $this->shouldThrow('\BadMethodCallException')->duringExpected($asserter);
     }
 }

@@ -8,6 +8,6 @@ class AsserterNotFoundExceptionSpec extends ObjectBehavior
 {
     function it_is_an_Exception()
     {
-        $this->shouldHaveType(\Exception::class);
+        $this->shouldHaveType('\Exception');
     }
 }

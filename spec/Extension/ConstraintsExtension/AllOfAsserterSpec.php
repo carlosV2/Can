@@ -18,7 +18,7 @@ class AllOfAsserterSpec extends ObjectBehavior
 
     function it_is_an_Asserter()
     {
-        $this->shouldHaveType(Asserter::class);
+        $this->shouldHaveType('carlosV2\Can\Asserter');
     }
 
     function it_returns_true_if_all_the_asserters_return_true()

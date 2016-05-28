@@ -2,14 +2,13 @@
 
 namespace spec\carlosV2\Can\Extension\PrimitiveTypesExtension;
 
-use carlosV2\Can\Asserter;
 use PhpSpec\ObjectBehavior;
 
 class NullAsserterSpec extends ObjectBehavior
 {
     function it_is_an_Asserter()
     {
-        $this->shouldHaveType(Asserter::class);
+        $this->shouldHaveType('carlosV2\Can\Asserter');
     }
 
     function it_returns_true_for_null()

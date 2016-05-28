@@ -12,15 +12,15 @@ class PrimitiveTypesExtension implements Extension
     public function registerAsserters()
     {
         return [
-            'string' => StringAsserter::class,
-            'integer' => IntegerAsserter::class,
-            'int' => IntegerAsserter::class,
-            'float' => FloatAsserter::class,
-            'array' => ArrayAsserter::class,
-            'null' => NullAsserter::class,
-            'bool' => BooleanAsserter::class,
-            'boolean' => BooleanAsserter::class,
-            'callable' => CallableAsserter::class
+            'string' => 'carlosV2\Can\Extension\PrimitiveTypesExtension\StringAsserter',
+            'integer' => 'carlosV2\Can\Extension\PrimitiveTypesExtension\IntegerAsserter',
+            'int' => 'carlosV2\Can\Extension\PrimitiveTypesExtension\IntegerAsserter',
+            'float' => 'carlosV2\Can\Extension\PrimitiveTypesExtension\FloatAsserter',
+            'array' => 'carlosV2\Can\Extension\PrimitiveTypesExtension\ArrayAsserter',
+            'null' => 'carlosV2\Can\Extension\PrimitiveTypesExtension\NullAsserter',
+            'bool' => 'carlosV2\Can\Extension\PrimitiveTypesExtension\BooleanAsserter',
+            'boolean' => 'carlosV2\Can\Extension\PrimitiveTypesExtension\BooleanAsserter',
+            'callable' => 'carlosV2\Can\Extension\PrimitiveTypesExtension\CallableAsserter'
         ];
     }
 }

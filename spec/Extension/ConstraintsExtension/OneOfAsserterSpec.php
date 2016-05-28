@@ -18,7 +18,7 @@ class OneOfAsserterSpec extends ObjectBehavior
 
     function it_is_an_Asserter()
     {
-        $this->shouldHaveType(Asserter::class);
+        $this->shouldHaveType('carlosV2\Can\Asserter');
     }
 
     function it_returns_true_if_at_least_one_asserter_returns_true(Asserter $asserter2)

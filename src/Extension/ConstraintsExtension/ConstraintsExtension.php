@@ -9,9 +9,9 @@ class ConstraintsExtension implements Extension
     public function registerAsserters()
     {
         return [
-            'optionalAnd' => OptionalAndAsserter::class,
-            'allOf' => AllOfAsserter::class,
-            'oneOf' => OneOfAsserter::class
+            'optionalAnd' => 'carlosV2\Can\Extension\ConstraintsExtension\OptionalAndAsserter',
+            'allOf' => 'carlosV2\Can\Extension\ConstraintsExtension\AllOfAsserter',
+            'oneOf' => 'carlosV2\Can\Extension\ConstraintsExtension\OneOfAsserter'
         ];
     }
 }
