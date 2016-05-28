@@ -11,6 +11,7 @@
     }
   ],
   "autoload": {
+    "files": ["src/bootstrap.php"],
     "psr-4": {
       "carlosV2\\Can\\": "src"
     }
