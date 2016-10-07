@@ -24,7 +24,7 @@ And then I ask you to validate it according to the following constraints:
 - `key1` must contain an integer between `100` and `200`.
 - `key2` must contain a non-empty string.
 - `key3` must contain either a boolean or a callable.
-- If `key4` is set, it must be an array with a minimum of `3` items.
+- If `key4` is set, it must be an array with a maximum of `3` items.
 - It cannot have any other key.
 
 How long would your code to validate `$data` be?
