@@ -4,6 +4,8 @@ namespace carlosV2\Can;
 
 use carlosV2\Can\Exception\AsserterNotFoundException;
 use carlosV2\Can\Extension\ConstraintsExtension\AllOfAsserter;
+use carlosV2\Can\Extension\ConstraintsExtension\EqualsToAsserter;
+use carlosV2\Can\Extension\ConstraintsExtension\LikeAsserter;
 use carlosV2\Can\Extension\ConstraintsExtension\OneOfAsserter;
 use carlosV2\Can\Extension\ConstraintsExtension\OptionalAndAsserter;
 use carlosV2\Can\Extension\PrimitiveTypesExtension\ArrayAsserter;
@@ -29,6 +31,8 @@ use carlosV2\Can\Extension\PrimitiveTypesExtension\StringAsserter;
  * @method static OptionalAndAsserter beOptionalAnd(AsserterInterface $asserter)
  * @method static AllOfAsserter beAllOf(AsserterInterface ...$asserters)
  * @method static OneOfAsserter beOneOf(AsserterInterface ...$asserters)
+ * @method static EqualsToAsserter beEqualsTo(mixed $value)
+ * @method static LikeAsserter beLike(mixed $value)
  */
 class To
 {
