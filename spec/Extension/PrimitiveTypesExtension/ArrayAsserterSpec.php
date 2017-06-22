@@ -7,17 +7,17 @@ use PhpSpec\ObjectBehavior;
 
 class ArrayAsserterSpec extends ObjectBehavior
 {
-    function _it_is_an_Asserter()
+    function it_is_an_Asserter()
     {
         $this->shouldHaveType('carlosV2\Can\AsserterInterface');
     }
 
-    function _it_returns_true_for_arrays()
+    function it_returns_true_for_arrays()
     {
         $this->check([])->shouldReturn(true);
     }
     
-    function _it_returns_false_for_anything_but_arrays()
+    function it_returns_false_for_anything_but_arrays()
     {
         $this->check(123)->shouldReturn(false);
         $this->check(null)->shouldReturn(false);
@@ -26,7 +26,7 @@ class ArrayAsserterSpec extends ObjectBehavior
         $this->check(true)->shouldReturn(false);
     }
 
-    function _it_ensures_the_array_has_a_minimum_count()
+    function it_ensures_the_array_has_a_minimum_count()
     {
         $this->withMinCount(2)->shouldReturn($this);
 
@@ -35,7 +35,7 @@ class ArrayAsserterSpec extends ObjectBehavior
         $this->check(['a', 'b', 'c'])->shouldReturn(true);
     }
 
-    function _it_ensures_the_string_has_a_maximum_count()
+    function it_ensures_the_array_has_a_maximum_count()
     {
         $this->withMaxCount(2)->shouldReturn($this);
 
@@ -44,7 +44,7 @@ class ArrayAsserterSpec extends ObjectBehavior
         $this->check(['a', 'b', 'c'])->shouldReturn(false);
     }
 
-    function _it_ensures_the_values_types(AsserterInterface $asserter)
+    function it_ensures_the_values_types(AsserterInterface $asserter)
     {
         $asserter->check('a')->willReturn(true);
         $asserter->check('b')->willReturn(false);
@@ -66,7 +66,7 @@ class ArrayAsserterSpec extends ObjectBehavior
         $this->check(['k1' => 'val1', 'k2' => 'val2', 'k3' => 'val3'])->shouldReturn(false);
     }
 
-    function _it_ensures_the_keys_types(AsserterInterface $asserterK1, AsserterInterface $asserterK2)
+    function it_ensures_the_keys_types(AsserterInterface $asserterK1, AsserterInterface $asserterK2)
     {
         $asserterK1->check('val1')->willReturn(true);
         $asserterK1->check(1)->willReturn(false);
@@ -81,7 +81,7 @@ class ArrayAsserterSpec extends ObjectBehavior
         $this->check(['k1' => 1, 'k2' => 'val2'])->shouldReturn(false);
     }
 
-    function _it_does_not_allow_the_expected_to_be_called_without_a_key(AsserterInterface $asserter)
+    function it_does_not_allow_the_expected_to_be_called_without_a_key(AsserterInterface $asserter)
     {
         $this->shouldThrow('\BadMethodCallException')->duringExpected($asserter);
     }
