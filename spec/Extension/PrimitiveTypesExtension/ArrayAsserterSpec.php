@@ -4,6 +4,7 @@ namespace spec\carlosV2\Can\Extension\PrimitiveTypesExtension;
 
 use carlosV2\Can\AsserterInterface;
 use PhpSpec\ObjectBehavior;
+use Prophecy\Argument;
 
 class ArrayAsserterSpec extends ObjectBehavior
 {
@@ -84,5 +85,19 @@ class ArrayAsserterSpec extends ObjectBehavior
     function it_does_not_allow_the_expected_to_be_called_without_a_key(AsserterInterface $asserter)
     {
         $this->shouldThrow('\BadMethodCallException')->duringExpected($asserter);
+    }
+
+    function it_ensures_it_contains_expected_values(AsserterInterface $asserterK1, AsserterInterface $asserterK2)
+    {
+        $asserterK1->check('k1')->willReturn(true);
+        $asserterK1->check(Argument::type('string'))->willReturn(false);
+        $asserterK2->check('k2')->willReturn(true);
+        $asserterK2->check(Argument::type('string'))->willReturn(false);
+
+        $this->withOneValueExpected($asserterK1)->shouldReturn($this);
+        $this->withOneValueExpected($asserterK2)->shouldReturn($this);
+
+        $this->check(['k1', 'k2'])->shouldReturn(true);
+        $this->check(['k1', 'k3'])->shouldReturn(false);
     }
 }

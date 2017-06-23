@@ -42,3 +42,9 @@ This function checks if the given array contains other non-registered keys. This
 call to `withKey` in order to know which keys it needs to check.
 
 You can use this function as `To::beArray()->withKey($key)->withNoOtherKeys()`.
+
+### withOneValueExpected
+
+This function checks if there is at least one value in the array that matches the given asserter.
+
+You can use this function as `To::beArray()->withOneValueExpected(To::be*())`.

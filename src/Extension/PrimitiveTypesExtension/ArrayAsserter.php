@@ -17,6 +17,11 @@ class ArrayAsserter implements AsserterInterface
     private $max;
 
     /**
+     * @var AsserterInterface[]
+     */
+    private $singleValuesAsserters;
+
+    /**
      * @var AsserterInterface
      */
     private $valuesAsserter;
@@ -40,6 +45,7 @@ class ArrayAsserter implements AsserterInterface
     {
         $this->keys = [];
         $this->otherKeysAllowed = true;
+        $this->singleValuesAsserters = [];
     }
 
     /**
@@ -87,6 +93,18 @@ class ArrayAsserter implements AsserterInterface
     {
         $this->lastKey = $key;
         $this->keys[$key] = null;
+
+        return $this;
+    }
+
+    /**
+     * @param AsserterInterface $valueAsserter
+     *
+     * @return ArrayAsserter
+     */
+    public function withOneValueExpected(AsserterInterface $valueAsserter)
+    {
+        $this->singleValuesAsserters[] = $valueAsserter;
 
         return $this;
     }
@@ -143,6 +161,18 @@ class ArrayAsserter implements AsserterInterface
                 if (!$this->valuesAsserter->check($value)) {
                     return false;
                 }
+            }
+        }
+
+        if (count($this->singleValuesAsserters) > 0) {
+            foreach ($this->singleValuesAsserters as $singleValueAsserter) {
+                foreach ($data as $value) {
+                    if ($singleValueAsserter->check($value)) {
+                        continue 2;
+                    }
+                }
+
+                return false;
             }
         }
 
