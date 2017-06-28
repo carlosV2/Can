@@ -8,6 +8,7 @@ use carlosV2\Can\Extension\ConstraintsExtension\EqualsToAsserter;
 use carlosV2\Can\Extension\ConstraintsExtension\LikeAsserter;
 use carlosV2\Can\Extension\ConstraintsExtension\OneOfAsserter;
 use carlosV2\Can\Extension\ConstraintsExtension\OptionalAndAsserter;
+use carlosV2\Can\Extension\ConstraintsExtension\SetAsserter;
 use carlosV2\Can\Extension\PrimitiveTypesExtension\ArrayAsserter;
 use carlosV2\Can\Extension\PrimitiveTypesExtension\BooleanAsserter;
 use carlosV2\Can\Extension\PrimitiveTypesExtension\CallableAsserter;
@@ -33,6 +34,7 @@ use carlosV2\Can\Extension\PrimitiveTypesExtension\StringAsserter;
  * @method static OneOfAsserter beOneOf(AsserterInterface ...$asserters)
  * @method static EqualsToAsserter beEqualsTo(mixed $value)
  * @method static LikeAsserter beLike(mixed $value)
+ * @method static SetAsserter beSet()
  */
 class To
 {

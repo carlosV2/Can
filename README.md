@@ -74,4 +74,5 @@ Available documentation:
     - [All of](https://github.com/carlosV2/Can/blob/master/docs/ConstraintsExtension/all_of.md)
     - [Optional and](https://github.com/carlosV2/Can/blob/master/docs/ConstraintsExtension/optional_and.md)
     - [Equals to](https://github.com/carlosV2/Can/blob/master/docs/ConstraintsExtension/equals_to.md)
-    - [like](https://github.com/carlosV2/Can/blob/master/docs/ConstraintsExtension/like.md)
+    - [Like](https://github.com/carlosV2/Can/blob/master/docs/ConstraintsExtension/like.md)
+    - [Set](https://github.com/carlosV2/Can/blob/master/docs/ConstraintsExtension/set.md)
